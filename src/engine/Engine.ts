@@ -53,6 +53,13 @@ export class Engine {
     this.context = this.canvas.getContext("2d")!;
   }
 
+  public update() {
+    const requestedState = this._state?.requestedState?.();
+    if(requestedState) {
+      this.state = requestedState;
+    }
+  }
+
   public render() {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     if(this._state) {

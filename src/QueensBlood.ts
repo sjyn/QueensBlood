@@ -17,6 +17,7 @@ export class QueensBlood {
 
   private update() {
     this.updateClock = Date.now();
+    this.engine.update();
   }
 
   private draw() {

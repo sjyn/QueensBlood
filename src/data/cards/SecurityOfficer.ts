@@ -1,5 +1,6 @@
 import { staticImplements } from "../../utils";
 import { ICard, IDeserializeableCard } from "./ICard";
+import {SecurityOfficerAsset} from "../../asset/cards";
 
 @staticImplements<IDeserializeableCard>()
 export class SecurityOfficerCard implements ICard {
@@ -17,6 +18,10 @@ export class SecurityOfficerCard implements ICard {
       ["-", "-", "+", "-", "-"],
       ["-", "-", "-", "-", "-"],
     ]
+  }
+
+  get assetUrl(): string {
+    return SecurityOfficerAsset.default;
   }
 
   get pawnCount(): number {

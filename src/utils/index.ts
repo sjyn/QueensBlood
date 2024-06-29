@@ -33,3 +33,21 @@ export const getCenterY = (h: number): number => {
   const canvasHeight = document.getElementById("canvas")?.clientHeight || 0;
   return (canvasHeight / 2) + (h / 2);
 }
+
+export const canvasWidth = () => {
+  return document.getElementById("canvas")?.clientWidth || 0;
+}
+
+export const canvasHeight = () => {
+  return document.getElementById("canvas")?.clientHeight || 0;
+}
+
+
+export class FillColors {
+  static readonly LOGO_COLOR = "rgb(231, 215, 151)";
+  static readonly TILE_BLUE = "rgb(49, 51, 82)";
+  static readonly TILE_WHITE = "rgb(220, 220, 220)";
+  static readonly BLACK = "rgb(0, 0, 0)";
+  static readonly GREEN_PAWN = "rgb(120, 191, 158)";
+  static readonly RED_PAWN = "rgb(101, 49, 80)";
+}

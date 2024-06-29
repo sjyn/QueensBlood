@@ -5,6 +5,7 @@ export interface ICard {
   get cardNumber(): number;
   get cardType(): "standard" | "legendary";
   get id(): string;
+  get assetUrl(): string;
 
   serialize(): string;
 }
